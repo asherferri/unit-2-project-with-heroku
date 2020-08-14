@@ -12,10 +12,15 @@ const options = {
 
 const pgp = require ('pg-promise')(options)
 
+
 //modified to link database on deployment
 function setDatabase() {
     if (process.env.NODE_ENV ===
-        'development' || !process.env.NODE_ENV) 
+        /** dev has to be the same word used in the local environment 
+         * otherwise even if HEROKU doesn't care, locally will break
+         * the functions flow.
+         */
+        'dev' || !process.env.NODE_ENV) 
         {
             return pgp ({
             database: process.env.DB_NAME,
@@ -30,8 +35,8 @@ function setDatabase() {
 
 
 
+// module.exports = setDatabase()
 module.exports = setDatabase()
-
 
 // module.exports = pgp({
 //     database: process.env.DB_NAME,
