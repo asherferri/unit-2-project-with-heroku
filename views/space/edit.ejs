@@ -1,0 +1,15 @@
+<%- include('../partials/boilerplate') %>
+
+  <form method='POST' action='/launches/<%= launch.id %>?_method=PUT'>
+    <input type="text" name="name" placeholder="Name" value="<%= launch.name %>">
+    <input type="text" name="launch_date" placeholder="Launch Date" value="<%= launch.launch_date %>">
+    <input type="text" name="launch_time" placeholder="Launch Time" value="<%= launch.launch_time %>">
+    <input type="text" name="lsp" placeholder="Launch Service Provides" value="<%= launch.lsp %>">
+    <input type="text" name="pad" placeholder="Pad" value="<%= launch.pad %>">
+    <input type="text" name="location" placeholder="Location" value="<%= launch.location %>">
+    <input type="text" name="cc" placeholder="Country Code" value="<%= launch.cc %>">
+    <textarea name="mission" placeholder="Mission Description"><%= launch.mission %></textarea>
+    <input type="submit" value="Modify this Launch">
+  </form>
+
+<%- include('../partials/end') %>

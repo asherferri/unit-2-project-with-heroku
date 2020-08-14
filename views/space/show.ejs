@@ -1,0 +1,25 @@
+<%- include('../partials/boilerplate') %>
+
+<div>
+    <h1>NAME: <%= launch.name %></h3>
+    <p>LAUNCH DATE: <%= launch.launch_date %></p>
+    <p>LAUNCH TIME: <%= launch.launch_time %></p>
+    <h3>LAUCH SERVICE PROVIDER: <%= launch.lsp %></h3>
+    <p>PAD: <%= launch.pad %></p>
+    <p>LOCATION: <%= launch.location %></p>
+    <h3>COUNTRY CODE: <%= launch.cc %></h3>
+    <p>MISSION: <%= launch.mission %></p>
+    
+    <!-- here's delete!!! u need to access the individual -->
+    <!-- record to delete it -->
+    <form method="POST" action="/launches/<%= launch.id %>?_method=DELETE">
+      <input type="submit" value="Delete this Launch">
+    </form>
+    
+    
+    <a href="/launches" class="buttonlike">Back to the Launches!</a>
+    
+    </div>
+    
+    
+<%- include('../partials/end') %>

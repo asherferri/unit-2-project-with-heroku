@@ -1,0 +1,115 @@
+body {
+    font-family: sans-serif;
+    background: gray;
+  }
+
+h1 {
+    color: white;
+    font-size: 5vw;
+    font-weight: 800;
+}
+  .page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  header {
+    background-color: rgb(60, 0, 120);
+  }
+  
+  .header-container {
+    width: 80vw;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+  
+  .logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+  }
+  
+  nav ul {
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+    color: rgba(255, 115, 0, 0.671);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  a:visited {
+    color: inherit;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    font-size: 1.5em;
+    color: white;
+    background-color: rgb(60, 0, 120);
+  }
+  
+  .todo-wrapper {
+    max-width: 600px;
+    width: 80vw;
+    margin: auto;
+    padding: 15px;
+  }
+  
+  .launch {
+    width: 100%;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 7px;
+    margin: 5px;
+  }
+  
+  .title-status, .category-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+  }
+  
+  .title-status {
+    border-bottom: 1px solid rgba(125, 241, 221);
+  }
+  
+  .title-status h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .buttonlike {
+    background-color:  rgb(207, 207, 207);
+    padding: 5px 10px;
+    border-radius: 3px;
+  }
+  
+  .addALaunchButton {
+    background-color:  rgb(173, 173, 173);
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: white;
+  }

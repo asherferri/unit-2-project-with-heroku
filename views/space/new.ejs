@@ -1,0 +1,15 @@
+<%- include('../partials/boilerplate') %>
+
+<form method='POST' action='/launches'>
+    <input type="text" name="name" placeholder="Name">
+    <input type="text" name="launch_date" placeholder="Launch Date">
+    <input type="text" name="launch_time" placeholder="Launch Time">
+    <input type="text" name="lsp" placeholder="Launch Service Provides">
+    <input type="text" name="pad" placeholder="Pad">
+    <input type="text" name="location" placeholder="Location">
+    <input type="text" name="cc" placeholder="Country Code">
+    <textarea name="mission" placeholder="Mission Description"></textarea>
+    <input type="submit" value="Add this Launch">
+  </form>
+
+<%- include('../partials/end') %>
