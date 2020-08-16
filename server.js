@@ -18,6 +18,18 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(methodOverride('_method'))
 app.use(express.static('public'))
 app.use(cookieParser())
+//added when updating server.js for auth addon
+app.use(
+    session({
+        secret: process.env.SECRET_KEY,
+        resave: false,
+        saveUninitialized: true,
+    })
+)
+//added when updating server.js for auth addon
+//added passport and session use for app
+app.use(passport.initialize())
+app.use(passport.session())
 
 //our views are in folder views
 app.set('views', 'views')
@@ -38,9 +50,13 @@ app.get('/', (req, res) => {
 //sends render of index view
     res.render('index') 
 })
+//add use to authRoute
 
 //add use to route
 app.use('/launches', spaceRouter)
+
+//add use to userRoute
+
 
 app.use('*', (req, res) => {
     res.status(404).send('Nein Nein not hereee')
