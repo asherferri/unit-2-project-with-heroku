@@ -25,7 +25,7 @@ app.set('view engine', 'ejs')
 
 const PORT = process.env.PORT || 7777
 app.listen(PORT, () => {
-    console.log(`Listening Tonight He Grins Again - By Savatage on port ${PORT}`)
+    console.log(`Listening Ships With Holes Will Sink - By We Were Promised Jetpacks on port ${PORT}`)
 })
 
 app.get('/', (req, res) => {
