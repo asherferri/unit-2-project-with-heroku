@@ -21,7 +21,7 @@ class User {
         return db
         .one(`INSERT INTO users
             (username, email, password_digest)
-            VALUES ($/username/,$/email/,$/password_digest/,)
+            VALUES ($/username/,$/email/,$/password_digest/)
             RETURNING *`, this)
             .then((savedUser) => Object.assign(this, savedUser))
     }
