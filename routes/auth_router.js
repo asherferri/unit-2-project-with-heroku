@@ -1,5 +1,5 @@
 const express = require('express')
-const authHelpers = require('../services/auth/auth-helpers')
+const authHelpers = require('../services/auth/auth_helpers')
 const passport = require('../services/auth/local')
 const authRouter = express.Router()
 

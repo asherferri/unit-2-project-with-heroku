@@ -1,8 +1,8 @@
 const express = require('express')
 const userRouter = express.Router()
 
-const authHelpers = require('../services/auth/auth-helpers')
-const usersController = require('../controllers/users-controller')
+const authHelpers = require('../services/auth/auth_helpers')
+const usersController = require('../controllers/user_controller')
 
 userRouter.get('/', authHelpers.loginRequired, usersController.index)
 userRouter.get('/new', authHelpers.loginRedirect, (req, res) => {

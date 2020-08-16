@@ -6,8 +6,16 @@ const methodOverride = require('method-override')
 const session = require('express-session')
 const passport = require('passport')
 
-//router added
+
+//authRouter added
+const authRouter = require('./routes/auth_router');
+
+//spaceRouter added
 const spaceRouter = require('./routes/space_router')
+
+//userRouter added
+const userRouter = require('./routes/user_router');
+
 
 const app = express()
 require('dotenv').config()
@@ -51,12 +59,11 @@ app.get('/', (req, res) => {
     res.render('index') 
 })
 //add use to authRoute
-
+app.use('/auth', authRouter)
 //add use to route
 app.use('/launches', spaceRouter)
-
 //add use to userRoute
-
+app.use('/user', userRouter)
 
 app.use('*', (req, res) => {
     res.status(404).send('Nein Nein not hereee')
