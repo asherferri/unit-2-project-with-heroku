@@ -2,6 +2,8 @@ const express = require('express')
 const spaceController = require('../controllers/space_controller')
 const spaceRouter = express.Router()
 
+
+const authHelpers = require('../services/auth/auth_helpers')
 // spaceRouter.get('/', (req, res) => {
 //     res.send('list of launches go here')
 // })
@@ -14,9 +16,9 @@ spaceRouter.get('/about', (req, res) => {
     res.render('space/about')
 })
 //create launches
-spaceRouter.post('/', spaceController.create)
+spaceRouter.post('/', /**added auth functionality */authHelpers.loginRequired, spaceController.create)
 //creates launch in view new
-spaceRouter.get('/new', (req, res) => {
+spaceRouter.get('/new', /**added auth functionality */authHelpers.loginRequired, (req, res) => {
     //we declare the folder route
     res.render('space/new')
 })
@@ -27,14 +29,14 @@ spaceRouter.get('/:id([0-9]+)', spaceController.show, (req, res) => {
     })
 })
 //update/modify/edit however you wanna call it route
-spaceRouter.get('/:id([0-9]+)/edit', spaceController.show, (req, res) => {
+spaceRouter.get('/:id([0-9]+)/edit', /**added auth functionality */spaceController.show, (req, res) => {
     res.render('space/edit', {
         launch: res.locals.launch
     })
 })
-spaceRouter.put('/:id([0-9]+)', spaceController.update)
+spaceRouter.put('/:id([0-9]+)', /**added auth functionality */authHelpers.loginRequired, spaceController.update)
 //delete
-spaceRouter.delete('/:id([0-9]+)', spaceController.delete)
+spaceRouter.delete('/:id([0-9]+)',/**added auth functionality */authHelpers.loginRequired, spaceController.delete)
 
 
 module.exports = spaceRouter
