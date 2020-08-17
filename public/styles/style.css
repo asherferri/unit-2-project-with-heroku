@@ -1,112 +1,143 @@
 body {
-    font-family: sans-serif;
-    background: gray;
+  font-family: sans-serif;
+  background: gray;
   }
 
 h1 {
-    color: white;
-    font-size: 5vw;
-    font-weight: 800;
+  color: white;
+  font-size: 5vw;
+  font-weight: 800;
 }
-  .page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  main {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  header {
-    background-color: rgb(60, 0, 120);
-  }
-  
-  .header-container {
-    width: 80vw;
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-  }
-  
-  .logo {
-    font-size: 2em;
-    font-weight: bold;
-    color: white;
-  }
-  
-  nav ul {
-    display: flex;
-  }
-  
-  nav ul li {
-    margin: 0 10px;
-    color: rgba(255, 115, 0, 0.671);
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
-  }
-  
-  a:visited {
-    color: inherit;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0;
-    font-size: 1.5em;
-    color: white;
-    background-color: rgb(60, 0, 120);
-  }
-  
-  .launch_wrapper {
-    max-width: 600px;
-    width: 50vw;
-    margin: auto;
-    padding: 15px;
-  }
-  
-  .launch {
-    width: 100%;
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 7px;
-    margin: 5px;
-  }
-  
-  .title-status {
-    display: flex;
-    justify-content: space-between;
-    padding: 7px;
-    align-items: center;
-  }
-  
-  .button_info {
-    padding: 4px 7px;
-    border-radius: 3px;
-    background-color:  rgb(207, 207, 207);
-  }
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-  .button_edit {
-    padding: 4px 7px;
-    border-radius: 3px;
-    background-color:  rgb(207, 207, 207);
-  }
-  
-  .addALaunchButton {
-    background-color:  rgb(173, 173, 173);
-    padding: 5px 10px;
-    border-radius: 3px;
-    color: white;
-  }
+main {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  background-color: rgb(51, 51, 51);
+  border-style: solid;
+  border-bottom-color: white;
+  border-width: 5px;
+}
+
+.header-container {
+  width: 80vw;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 10px;
+  color: rgba(255, 115, 0, 0.671);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  font-size: 1.5em;
+  color: white;
+  background-color: rgb(51, 51, 51);
+  border-style: solid;
+  border-top-color: white;
+  border-top-width: 5px;
+}
+
+.launch_wrapper {
+  max-width: 600px;
+  width: 50vw;
+  margin: auto;
+  padding: 15px;
+}
+
+.launch {
+  width: 100%;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 7px;
+  margin: 5px;
+}
+
+.launch_show {
+  width: 50%;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 7px;
+  margin: 5px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px;
+  align-items: center;
+}
+
+.button_info {
+  padding: 4px 7px;
+  border-radius: 3px;
+  background-color:  rgb(207, 207, 207);
+}
+
+.button_edit {
+  padding: 4px 7px;
+  border-radius: 3px;
+  background-color:  rgb(207, 207, 207);
+}
+
+a.button_back {
+  float: right;
+  padding: 4px 7px;
+  margin: 7px;
+  border-radius: 3px;
+  background-color:  rgb(239, 239, 239);
+  color: rgb(0, 0, 0);
+  font-weight: normal;
+  font-size: small;
+}
+
+.delete_launch {
+  float: left;
+  padding: 4px 7px;
+  margin: 3px;
+  border-radius: 3px;
+}
+
+.addALaunchButton {
+  background-color:  rgb(173, 173, 173);
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: white;
+}
