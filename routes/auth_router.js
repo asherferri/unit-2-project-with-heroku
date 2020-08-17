@@ -15,7 +15,12 @@ authRouter.post('/login',passport.authenticate('local', {
 
 authRouter.get('/logout', (req, res) => {
   req.logout()
-  res.redirect('back')
+  //redirect to same page after logout
+  //res.redirect('back')
+  //redirects to home page
+  //res.redirect('/')
+  //renders a logout view
+  res.render('auth/logout')
 })
 
 module.exports = authRouter

@@ -1,0 +1,21 @@
+<%- include('../partials/boilerplate') %>
+
+<div class="todo-wrapper">
+    <% launches.forEach(user.launch => { %>
+      <div class="launch">
+        <div class="category-actions">
+          <h5><%= user.launch.name %></h5>
+          <div class="actions">
+          <a class="buttonlike" href="/launches/<%= user.launch.id %>">Info</a>
+          <a class="buttonlike" href="/launches/<%= user.launch.id %>/edit">Edit</a>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+    <!-- we declare the browser live route -->
+    <a href="/launches/new" class="addALaunchButton">Add a Launch</a>
+  </div>
+
+ 
+
+  <%- include('../partials/end') %>

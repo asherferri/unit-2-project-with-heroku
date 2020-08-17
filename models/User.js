@@ -1,4 +1,5 @@
 const db = require('../db/config')
+const Space = require('./Space')
 
 class User {
     constructor({id, username, email, password_digest}) {
@@ -24,6 +25,15 @@ class User {
             VALUES ($/username/,$/email/,$/password_digest/)
             RETURNING *`, this)
             .then((savedUser) => Object.assign(this, savedUser))
+    }
+
+    //adding new method findUserLaunches
+    findUserLaunches() {
+        return db
+        .manyOrNone('SELECT * FROM launch WHERE user_id = $1', this.id)
+        .then((launches) => {
+            return launches.map((launch) => new Space(launch))
+        })
     }
 
 }
