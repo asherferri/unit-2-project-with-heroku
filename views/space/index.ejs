@@ -1,13 +1,13 @@
 <%- include('../partials/boilerplate') %>
 
-<div class="todo-wrapper">
+<div class="launch-wrapper">
     <% launches.forEach(launch => { %>
       <div class="launch">
-        <div class="category-actions">
+        <div class="title-status">
           <h5><%= launch.name %></h5>
           <div class="actions">
-          <a class="buttonlike" href="/launches/<%= launch.id %>">Info</a>
-          <a class="buttonlike" href="/launches/<%= launch.id %>/edit">Edit</a>
+          <a class="button_info" href="/launches/<%= launch.id %>">Info</a>
+          <a class="button_edit" href="/launches/<%= launch.id %>/edit">Edit</a>
           </div>
         </div>
       </div>

@@ -71,9 +71,9 @@ h1 {
     background-color: rgb(60, 0, 120);
   }
   
-  .todo-wrapper {
+  .launch_wrapper {
     max-width: 600px;
-    width: 80vw;
+    width: 50vw;
     margin: auto;
     padding: 15px;
   }
@@ -85,26 +85,23 @@ h1 {
     margin: 5px;
   }
   
-  .title-status, .category-actions {
+  .title-status {
     display: flex;
     justify-content: space-between;
-    padding: 15px;
+    padding: 7px;
     align-items: center;
   }
   
-  .title-status {
-    border-bottom: 1px solid rgba(125, 241, 221);
-  }
-  
-  .title-status h3 {
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-  
-  .buttonlike {
-    background-color:  rgb(207, 207, 207);
-    padding: 5px 10px;
+  .button_info {
+    padding: 4px 7px;
     border-radius: 3px;
+    background-color:  rgb(207, 207, 207);
+  }
+
+  .button_edit {
+    padding: 4px 7px;
+    border-radius: 3px;
+    background-color:  rgb(207, 207, 207);
   }
   
   .addALaunchButton {
