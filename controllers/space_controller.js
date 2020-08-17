@@ -22,11 +22,16 @@ const spaceController = {
             location: req.body.location,
             cc: req.body.cc,
             mission: req.body.mission,
+            /**add user id to launch table */
+            user_id: req.user.id,
         })
         .save()
         .then((launch) => {
             /*json object*/ //res.json({ launch })
-            res.redirect('/launches')
+            //redirects to launches index after creating launch
+            //res.redirect('/launches')
+            //redirects to individual launch created
+            res.redirect(`/launches/${launch.id}`)
         }).catch(next)
     },
 

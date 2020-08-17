@@ -11,6 +11,8 @@ class Space {
         this.location = launch.location
         this.cc = launch.cc
         this.mission = launch.mission || null
+        /**add user id to launch table */
+        this.user_id = launch.user_id || null
     }
     static getAll() {
         return db
@@ -29,9 +31,10 @@ class Space {
     }
 
     save() {
+        /**add user id to launch table */
         return db.one(`INSERT INTO launch
-        (name, launch_date, launch_time, lsp, pad, location, cc, mission)
-        VALUES ($/name/, $/launch_date/, $/launch_time/, $/lsp/, $/pad/, $/location/, $/cc/, $/mission/)
+        (name, launch_date, launch_time, lsp, pad, location, cc, mission, user_id)
+        VALUES ($/name/, $/launch_date/, $/launch_time/, $/lsp/, $/pad/, $/location/, $/cc/, $/mission/, $/user_id/)
         RETURNING *`, this).then(launch => Object.assign(this, launch))
     }
 
