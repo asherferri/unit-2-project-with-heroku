@@ -1,3 +1,23 @@
 <%- include('./partials/boilerplate') %>
-<h1>🛸This is my SpaceApp🚀</h1>
+<div>
+
+<h1>
+    <span onclick="spaceClick()">🛸</span>This is my SpaceApp<span onclick="rocketClick()">🚀</span></h1>
+
+<h3 style="text-align: center; padding: 1em;">Don't Click on the spaceCraft or Rocket <br>app will kaputs!</h3>
+
+</div>
+
+<script>
+console.log(`javaScript on partial index.ejs running 🤘🏻🤘🏻🤘🏻🤘🏻🤘🏻🤘🏻🤘🏻`)
+function spaceClick() {
+	alert(" Is that Irken equipment you're using? spaceCraft Clicked!");
+}
+function rocketClick() {
+	alert("Foooooool! You think I would let a stinking hoooman destroy my app???!rocket ClickeD!");
+}
+
+</script>
+
+
 <%- include('./partials/end') %>
